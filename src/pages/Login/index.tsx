@@ -1,9 +1,11 @@
 import React from 'react';
-import {StatusBar, Image} from 'react-native';
+import {StatusBar, Alert} from 'react-native';
 import {Button, Input, Divider, Text} from '@ui-kitten/components';
 import {useNavigation} from '@react-navigation/native';
+import auth from '@react-native-firebase/auth';
+import {LoginManager, AccessToken} from 'react-native-fbsdk-next';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
 
-import appleLogo from '../../assets/images/apple-logo.png';
 import {CustomIcon} from '../../components/Icon';
 import {Container, Row, ButtonContainer} from './styles';
 
@@ -11,6 +13,41 @@ const Login: React.FC = () => {
   const navigation = useNavigation();
 
   const handleSignIn = () => {
+    navigation.navigate('Dashboard');
+  };
+
+  const handleFacebookLogin = async () => {
+    const result = await LoginManager.logInWithPermissions([
+      'public_profile',
+      'email',
+    ]);
+
+    if (result.isCancelled) {
+      Alert.alert('Login Cancelado');
+      return;
+    }
+    const fbAccessToken = await AccessToken.getCurrentAccessToken();
+
+    if (!fbAccessToken) {
+      Alert.alert('Algo deu errado ao obter o token de acesso');
+    }
+
+    const facebookCredential = auth.FacebookAuthProvider.credential(
+      fbAccessToken?.accessToken || '',
+    );
+
+    await auth().signInWithCredential(facebookCredential);
+
+    navigation.navigate('Dashboard');
+  };
+
+  const onGoogleButtonPress = async () => {
+    const {idToken} = await GoogleSignin.signIn();
+
+    const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+
+    await auth().signInWithCredential(googleCredential);
+
     navigation.navigate('Dashboard');
   };
 
@@ -39,15 +76,12 @@ const Login: React.FC = () => {
         <Text category="h6">Ou entre utilizando</Text>
         <Divider />
       </Row>
-      <Row>
-        <ButtonContainer onPress={() => handleSignIn()}>
+      <Row align="center">
+        <ButtonContainer onPress={handleFacebookLogin}>
           <CustomIcon name="facebook" />
         </ButtonContainer>
-        <ButtonContainer onPress={() => handleSignIn()}>
+        <ButtonContainer onPress={onGoogleButtonPress}>
           <CustomIcon name="google" />
-        </ButtonContainer>
-        <ButtonContainer onPress={() => handleSignIn()}>
-          <Image source={appleLogo} />
         </ButtonContainer>
       </Row>
     </Container>

@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* socialLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* socialLoginTests.m */; };
 		02688D9F328795FE9D86E63C /* libPods-socialLogin-socialLoginTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 734D1275394B9622F3BA47DD /* libPods-socialLogin-socialLoginTests.a */; };
+		1321072A26AA54CF00F610AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1321072926AA54CF00F610AD /* GoogleService-Info.plist */; };
+		1321077326AA5BC700F610AD /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1321077226AA5BC700F610AD /* File.swift */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		13B16EF826B79F3A00A0969C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B16EF726B79F3A00A0969C /* File.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		DDF43F84D3EEFBC23D21E658 /* libPods-socialLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92AF6D214A99CB3459F9CEE3 /* libPods-socialLogin.a */; };
 /* End PBXBuildFile section */
@@ -32,12 +35,16 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* socialLoginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = socialLoginTests.m; sourceTree = "<group>"; };
 		06FA5AAEC0582CE1A4A5642B /* Pods-socialLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialLogin.release.xcconfig"; path = "Target Support Files/Pods-socialLogin/Pods-socialLogin.release.xcconfig"; sourceTree = "<group>"; };
+		1321072926AA54CF00F610AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1321077126AA5BC600F610AD /* socialLogin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "socialLogin-Bridging-Header.h"; sourceTree = "<group>"; };
+		1321077226AA5BC700F610AD /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* socialLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = socialLogin/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = socialLogin/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = socialLogin/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = socialLogin/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = socialLogin/main.m; sourceTree = "<group>"; };
+		13B16EF726B79F3A00A0969C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		734D1275394B9622F3BA47DD /* libPods-socialLogin-socialLoginTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-socialLogin-socialLoginTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5730ADEDF924F4264F949C /* Pods-socialLogin-socialLoginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialLogin-socialLoginTests.debug.xcconfig"; path = "Target Support Files/Pods-socialLogin-socialLoginTests/Pods-socialLogin-socialLoginTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = socialLogin/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,6 +99,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				13B16EF726B79F3A00A0969C /* File.swift */,
 			);
 			name = socialLogin;
 			sourceTree = "<group>";
@@ -116,12 +124,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				1321077226AA5BC700F610AD /* File.swift */,
+				1321072926AA54CF00F610AD /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* socialLogin */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* socialLoginTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				B56DAA4C0475523F12FD0572 /* Pods */,
+				1321077126AA5BC600F610AD /* socialLogin-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -145,7 +156,6 @@
 				7D5730ADEDF924F4264F949C /* Pods-socialLogin-socialLoginTests.debug.xcconfig */,
 				9334AF4029F0E4FC409EA59C /* Pods-socialLogin-socialLoginTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,7 +219,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -246,6 +256,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				1321072A26AA54CF00F610AD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +437,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				13B16EF826B79F3A00A0969C /* File.swift in Sources */,
+				1321077326AA5BC700F610AD /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7D5730ADEDF924F4264F949C /* Pods-socialLogin-socialLoginTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -472,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9334AF4029F0E4FC409EA59C /* Pods-socialLogin-socialLoginTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = socialLoginTests/Info.plist;
@@ -512,6 +527,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = socialLogin;
+				SWIFT_OBJC_BRIDGING_HEADER = "socialLogin-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -537,6 +553,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = socialLogin;
+				SWIFT_OBJC_BRIDGING_HEADER = "socialLogin-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
