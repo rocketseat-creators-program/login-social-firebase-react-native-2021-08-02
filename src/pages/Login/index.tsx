@@ -1,9 +1,8 @@
 import React from 'react';
-import {StatusBar, Image} from 'react-native';
+import {StatusBar} from 'react-native';
 import {Button, Input, Divider, Text} from '@ui-kitten/components';
 import {useNavigation} from '@react-navigation/native';
 
-import appleLogo from '../../assets/images/apple-logo.png';
 import {CustomIcon} from '../../components/Icon';
 import {Container, Row, ButtonContainer} from './styles';
 
@@ -39,15 +38,12 @@ const Login: React.FC = () => {
         <Text category="h6">Ou entre utilizando</Text>
         <Divider />
       </Row>
-      <Row>
+      <Row align="center">
         <ButtonContainer onPress={() => handleSignIn()}>
           <CustomIcon name="facebook" />
         </ButtonContainer>
         <ButtonContainer onPress={() => handleSignIn()}>
           <CustomIcon name="google" />
-        </ButtonContainer>
-        <ButtonContainer onPress={() => handleSignIn()}>
-          <Image source={appleLogo} />
         </ButtonContainer>
       </Row>
     </Container>
